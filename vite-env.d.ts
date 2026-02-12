@@ -10,5 +10,6 @@ interface ImportMeta {
 }
 interface Window {
   recaptchaVerifier: any;
+  confirmationResult: any;
 }
   
