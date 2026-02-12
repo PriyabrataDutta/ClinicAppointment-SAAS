@@ -6,10 +6,10 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// 1. Add 'icon' and 'label' to the types
+// DEFINING THE MISSING PROPS HERE
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  icon?: ReactNode;
+  icon?: ReactNode; // Added 'icon'
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -31,7 +31,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             className={cn(
               'flex h-10 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50 transition-all',
-              icon && 'pl-10', // Add padding if icon exists
+              icon && 'pl-10',
               className
             )}
             {...props}

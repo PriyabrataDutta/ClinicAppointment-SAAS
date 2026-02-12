@@ -6,10 +6,10 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// 1. Add 'size' and 'link' to the types
+// DEFINING THE MISSING PROPS HERE
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'outline' | 'ghost' | 'link';
-  size?: 'sm' | 'md' | 'lg' | 'icon';
+  variant?: 'primary' | 'outline' | 'ghost' | 'link'; // Added 'link'
+  size?: 'sm' | 'md' | 'lg' | 'icon';                 // Added 'size'
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
